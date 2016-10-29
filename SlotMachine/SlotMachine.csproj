@@ -106,12 +106,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bell.png" />
+    <Content Include="Cherry.png" />
+    <Content Include="Clover.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Diamond.png" />
     <Content Include="Global.asax" />
+    <Content Include="HorseShoe.png" />
+    <Content Include="Lemon.png" />
+    <Content Include="Orange.png" />
+    <Content Include="Plum.png" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="Seven.png" />
+    <Content Include="Strawberry.png" />
+    <Content Include="Watermellon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
