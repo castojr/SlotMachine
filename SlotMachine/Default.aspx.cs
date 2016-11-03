@@ -13,5 +13,12 @@ namespace SlotMachine
         {
 
         }
+
+
+
+        protected void spinButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,7 @@
         <asp:TextBox ID="betTextBox" runat="server" AutoPostBack="True"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="spinButton" runat="server" Text="SPIN" />
+        <asp:Button ID="spinButton" runat="server" Text="SPIN" OnClick="spinButton_Click" />
         <br />
         <br />
         <asp:Label ID="resultsLabel" runat="server"></asp:Label>
