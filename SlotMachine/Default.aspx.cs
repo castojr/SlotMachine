@@ -35,10 +35,25 @@ namespace SlotMachine
             return ImageSelector();
         }
 
+        private int YourBet()
+        {
+            return int.Parse(betTextBox.Text);
+        }
 
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
+            int bet = 0;
+            if(betTextBox.Text.Trim().Length == 0)
+            {
+                return;
+            }
+
+            if(!int.TryParse(betTextBox.Text, out bet))
+            {
+                return;
+            }
+
             ImageDisplay();
         }
     }
