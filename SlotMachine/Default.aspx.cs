@@ -54,6 +54,20 @@ namespace SlotMachine
             return resultsLabel.Text = String.Format("JACKPOT!!! You bet {0} and Won {1:C)", YourBet(), YourBet() * 100);
         }
 
+        private bool Bar()
+        {
+            if(leftImage.ImageUrl == "Bar.png" || middleImage.ImageUrl == "Bar.png" || rightImage.ImageUrl == "Bar.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private string BarResults()
+        {
+            return resultsLabel.Text = String.Format("Sorry, you lose {0:C}. Better luck next time.", YourBet());
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
