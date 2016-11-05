@@ -40,6 +40,20 @@ namespace SlotMachine
             return int.Parse(betTextBox.Text);
         }
 
+        private bool ThreeSevens()
+        {
+            if(leftImage.ImageUrl == "Seven.png" && middleImage.ImageUrl == "Seven.png" && rightImage.ImageUrl == "Seven.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private string ThreeSevensResults()
+        {
+            return resultsLabel.Text = String.Format("JACKPOT!!! You bet {0} and Won {1:C)", YourBet(), YourBet() * 100);
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
