@@ -16,6 +16,9 @@ namespace SlotMachine
                 leftImage.ImageUrl = ImageSelector();
                 middleImage.ImageUrl = ImageSelector();
                 rightImage.ImageUrl = ImageSelector();
+                int winnings = 100;
+                ViewState.Add("Money", winnings);
+                PlayersMoneyDisplay();
             }
 
         }
@@ -158,6 +161,11 @@ namespace SlotMachine
                 return -YourBet();
             }
             return YourBet();
+        }
+
+        private string PlayersMoneyDisplay()
+        {
+            return moneyLabel.Text = String.Format("Player's Money {0:C}", ViewState["Money"]);
         }
 
 
