@@ -151,6 +151,15 @@ namespace SlotMachine
             }
         }
 
+        private int WinLose()
+        {
+            if(SpinResults() == String.Format("Sorry, you lose {0:C}. Better luck next time.", YourBet()))
+            {
+                return -YourBet();
+            }
+            return YourBet();
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
