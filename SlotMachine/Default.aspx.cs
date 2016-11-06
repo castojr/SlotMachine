@@ -68,6 +68,20 @@ namespace SlotMachine
             return resultsLabel.Text = String.Format("Sorry, you lose {0:C}. Better luck next time.", YourBet());
         }
 
+        private bool ThreeCherries()
+        {
+            if(leftImage.ImageUrl == "Cherry.png" && middleImage.ImageUrl == "Cherry.png" && rightImage.ImageUrl == "Cherry.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private string ThreeCherriesResults()
+        {
+            return resultsLabel.Text = String.Format("You bet {0:C} and Won {1:C}", YourBet(), YourBet() * 4); 
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
