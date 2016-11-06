@@ -123,6 +123,34 @@ namespace SlotMachine
             return resultsLabel.Text = String.Format("Sorry, you lose {0:C}. Better luck next time.", YourBet());
         }
 
+        private string SpinResults()
+        {
+            if(ThreeSevens())
+            {
+                return ThreeSevensResults();
+            }
+            else if (Bar())
+            {
+                return BarResults();
+            }
+            else if (ThreeCherries())
+            {
+                return ThreeCherriesResults();
+            }
+            else if (TwoCherries())
+            {
+                return TwoCherriesResults();
+            }
+            else if (OneCherry())
+            {
+                return OneCherryResults();
+            }
+            else
+            {
+                return YouLoseText();
+            }
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
