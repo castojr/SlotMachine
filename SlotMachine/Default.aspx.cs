@@ -168,6 +168,13 @@ namespace SlotMachine
             return moneyLabel.Text = String.Format("Player's Money {0:C}", ViewState["Money"]);
         }
 
+        private void UpdatedWinnings()
+        {
+            int winnings = (int)ViewState["Money"];
+            winnings += WinLose();
+            ViewState["Money"] = winnings;
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
@@ -183,6 +190,9 @@ namespace SlotMachine
             }
 
             ImageDisplay();
+            SpinResults();
+            UpdatedWinnings();
+            PlayersMoneyDisplay();
         }
     }
 }
