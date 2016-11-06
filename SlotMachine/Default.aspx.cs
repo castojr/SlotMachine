@@ -82,6 +82,47 @@ namespace SlotMachine
             return resultsLabel.Text = String.Format("You bet {0:C} and Won {1:C}", YourBet(), YourBet() * 4); 
         }
 
+        private bool OneCherry()
+        {
+            if(leftImage.ImageUrl == "Cherry.png" || middleImage.ImageUrl == "Cherry.png" || rightImage.ImageUrl == "Cherry.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private string OneCherryResults()
+        {
+            return resultsLabel.Text = String.Format("You bet {0:C} and Won {1:C}", YourBet(), YourBet() *2);
+        }
+
+        private bool TwoCherries()
+        {
+            if(leftImage.ImageUrl == "Cherry.png" && middleImage.ImageUrl == "Cherry.png")
+            {
+                return true;
+            }
+            else if (middleImage.ImageUrl == "Cherry.png" && rightImage.ImageUrl == "Cherry.png")
+            {
+                return true;
+            }
+            else if (leftImage.ImageUrl == "Cherry.png" && rightImage.ImageUrl == "Cherry.png")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private string TwoCherriesResults()
+        {
+            return resultsLabel.Text = String.Format("You bet {0:C} and Won {1:C}", YourBet(), YourBet() * 3);
+        }
+
+        private string YouLoseText()
+        {
+            return resultsLabel.Text = String.Format("Sorry, you lose {0:C}. Better luck next time.", YourBet());
+        }
+
 
         protected void spinButton_Click(object sender, EventArgs e)
         {
